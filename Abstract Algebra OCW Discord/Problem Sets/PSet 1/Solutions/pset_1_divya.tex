@@ -1,0 +1,36 @@
+\documentclass{article}
+\date{\today}
+\input{assignmentpreamble.tex}
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{Abstract Algebra OCW Discord} % Course/class
+\newcommand{\assignmentTitle}{PSet 1} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Divya Ranjan} % Student name
+
+% Optional (comment lines to remove)
+\newcommand{\assignmentDueDate}{Wednesday,\ July\ 14,\ 2021} % Due date
+\begin{document}
+\maketitle
+
+\begin{problem}
+	\questiontext{}
+	\answer{
+		\begin{proof}
+			\begin{itemize}
+				\item $a \sim b \implies b - a \in \bZ \implies a - b \in \bZ \implies b \sim a$. Verifying, symmetricity. 
+				\item $a - a = 0 \in \bZ \implies a \sim a$. Verifying reflexivity. 
+				\item If $a \sim b \implies b-a \in \bZ$ and $b \sim c \implies c-b \in \bZ$, then adding those two relations we get $a - c \in \bZ \implies c \sim a$. 
+			\end{itemize}
+	Thus, $\sim$ on $\bR$ is indeed an equivalence relation. 
+
+
+
+		\end{proof}
+	}
+\end{problem}
+
+
+
+
+
+
+\end{document}

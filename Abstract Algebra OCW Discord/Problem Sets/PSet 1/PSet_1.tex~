@@ -1,0 +1,60 @@
+\documentclass{article}
+\input{preamble.tex}
+\title{Problem Set 1 : Sets and Categories}
+\date{14.08.2021}
+\usepackage{calc}
+\usepackage{accents}
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\maketitle
+\subsection{Naive Set Theory}
+
+1. Define a relation $\sim$ on the set $\mbb{R}$ of real numbers by setting $a \sim b \iff b-a \in \mbb{Z}$. Prove that this is an equivalence relation, and find a 'compelling' description for $\mbb{R}/\sim$. Do the same for relation $\approx$ on the plane $\mbb{R} \times \mbb{R}$ defined by declaring $(a_{1},a_{2}) \approx (b_{1},b_{2}) \iff b_{1}-a _{1} \in \mbb{Z}$ and $b_{2}-a_{2} \in \mbb{Z}$. [Aluffi Exercise 1.6]
+
+\subsection{Functions on Sets}
+
+2. Prove that the inverse of a bijection is a bijection and that the composition of two bijections is a bijection. [Aluffi Exercise 2.3]
+
+\vspace{2.5mm}
+
+\noindent
+3. Show that if $A' \cong A''$ and $B' \cong B''$, and further $A' \cap B' = \varnothing$, then $A' \cup B' \cong A'' \cup B''$. Conclude that the operation $A \sqcup B$ is well-defined \textit{up to isomorphism} [Aluffi Exercise 2.9]
+
+\subsection{Categories}
+
+3. Let $C$ be a category. Consider a structure $C^{op}$ with 
+
+\begin{itemize}
+\item Obj($C^{op}$) := Obj(C); 
+\item for A,B objects of $C^{op}$(hence objects of C), $Hom_{C^{op}}(A,B) := Hom_{C}(B,A)$. 
+
+\end{itemize}
+
+Show how to make this into a category. [Aluffi Exercise 3.1]
+
+\vspace{2.5mm}
+\noindent
+4. Define a category $V$ by taking Obj($V$) = $\mbb{N}$ and letting $Hom_{V}(n.m)$ = the set of $m \times n$  matrices with real entires, for all $m.n \in \mbb{N}$. Use matrix multiplication to define composition. Does this category "feel" familiar? [Aluffi Exercise 3.6] 
+
+\vspace{2.5mm}
+\noindent 
+5. Draw the relevant diagrams and define composition and identities for category $C^{A,B}$, mentioned in Example 3.9. Do the same for category $C^{\alpha,\beta}$ mentioned in Example 3.10. [Aluffi Exercise 3.11]
+
+\subsection{Morphisms}
+6. Let $A,B$ be objects of a category $C$, and let $f \in Hom_{C}(A,B)$ be a morphism. 
+\begin{itemize}
+\item Prove that if $f$ has a right-inverse, then $f$ is an epimorphism. 
+\item Show that the converse doesn't hold, by giving an explicit example of a category and an epimorphism without a right inverse. 
+\end{itemize}
+
+[Aluffi Exercise 4.3]
+\subsection{Universal Properties}
+7. Show that in every category $C$ the produts $A \times B$ and $ B \times A$ are isomorphic, if they exist. [Aluffi Exercise 5.8]
+
+\vspace{2.5mm}
+\noindent
+8. Let $C$ be a category with products. Find a reasonable candidate for the universal property that the product $A \times B \times C$ of \textit{three} objects of $C$ ought to satisfy,and prove that both $(A \times B) \times C$ and $A \times (B \times C)$ satisfy this universal property. Deduce that $(A \times B) \times C$ and $A \times (B \times C)$ are necessarily isomorphic. [Aluffi Exercise 5.9]
+
+
+\end{document}

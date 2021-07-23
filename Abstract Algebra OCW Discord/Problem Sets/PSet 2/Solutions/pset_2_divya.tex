@@ -1,0 +1,139 @@
+\documentclass{article}
+
+\input{assignmentpreamble.tex}
+\newcommand{\assignmentQuestionName}{Problem}
+\newcommand{\assignmentTitle}{Problem Set 2}
+\newcommand{\assignmentAuthorName}{Divya}
+\newcommand{\assignemntClass}{Abstract Algbra}
+\newcommand{\assignmentDueDate}{July 21, 2021}
+
+\begin{document}
+
+%Problem 1
+\begin{question}
+	\questiontext{Let $x$ and $y$ be two elements of a group $G$. Assume that each of the elements $x,y,xy$ has order 2. Prove that the set $H = \{ 1,x,y,xy \}$ is a subgroup of $G$, and it has order 4.}
+	\answer{
+		\begin{proof}
+			\begin{itemize}
+				\item We already have the identity $1 \in H$.
+				\item As $x,y, xy$ are defined to be of order 2, thus they happen to be their own inverses. As $x^{2}=xx=1$, $y^{2}=yy=1$ and $(xy)^{2}=xyxy=1$. And $1$ is also the inverse of itself but it is \textit{not} of order 2. 
+				\item Now we have to check that the multiplication is closed in $H$. One can make a Cayley multiplication table for this, but trivially, 
+\[			\begin{aligned}
+				1x =x1 =x \in H \\
+				1y =y1 =y \in H \\
+				xx = 1 \in H \\
+				yy = 1 \in H \\
+				xyy = x \in H \\
+				xxy = y \in H \\
+				1xy = xy1 =xy \in H
+			\end{aligned}			\]
+Thus, indeed the multiplication is closed in $H$. 
+
+				\item And this is satisfied if we can show that all the elements of $H$ are distinct. Assume $x=1$ or $y=1$, then $xx = 1x$ must be 1 as x has an order of 2, but that's not the case since $1x=x$. Asssume $x=y$, then $yx=yy$ is contradictory since $yy=1$ and $x$ already is the inverse of itself. Now, for the last case, assume $x=xy$ or $y=xy$, now this is again impossible because if you multiply both the equations by $y$ and $x$ respectively, you get $xy=xyy$ whch is contradictory beause $xyy=x1=x$ and 1 is the unique identity. Similarly it's impossible for $xy=xxy$. Thus all the elements of the set are unique. Making $H \subset G$ a well-defined subgroup and $\lvert H \rvert = 4$.  
+			\end{itemize}
+
+		\end{proof}
+	}
+
+\end{question}
+
+%Problem 2
+
+\begin{question}
+	\questiontext{Let $G$ be a group and let $a \in G$ have order $k$. If $p$ is a prime divisor of $k$, and if there is $x \in G$ with $x^{p}=a$, prove that $x$ has order $pk$.}
+	\answer{
+		\begin{proof}	
+
+		\end{proof}
+	}
+
+\end{question}
+
+%Problem 3
+\begin{question}
+	\questiontext{Let $G$ be a group in which $x^{2}=1$ for every $x \in G$, prove that $G$ must be abelian.}
+	\answer{
+	\begin{proof}
+		As $x^{2}=1 \quad \forall x \in G$, thus $x$ is the inverse of itself. So for two distinct elements $x,y \in G \quad x \neq y$ we have, 
+		\[ (xy)^{-1} = y^{-1}x^{-1} = yx \implies xyyx = 1 \] 
+	So, $yx$ is the inverse of $xy$. But also as we have assosciativity under this group, $xyxy = xxyy= 1$, making $xy$ to be the inverse of itself, but as we know that in a well-defined groupo, the inverse of each element has to be unique so $yx = xy \quad \forall x,y \in G$, proving $G$ to be abelian. 
+	\end{proof}
+	}
+
+\end{question}
+
+%Problem 4
+\begin{question}
+	\questiontext{If $G$ is a group with an even number of elements, prove that the number of elements in $G$ of order $2$ is odd. In particular, $G$ must contain an element of order $2$.}
+	\answer{
+	\begin{proof}
+
+	\end{proof} 
+}
+	
+
+\end{question}
+
+%Problem 5
+\begin{question}
+	\questiontext{Let $H$ be a subgroup of $G$ and $C(H) = \{ g \in G : gh = hg \quad \forall h \in H \}$ Prove that $C(H)$ is a subgroup of $G$. This is known as the \textit{centralizer} of $H$ in $G$.}
+	\answer{
+		\begin{proof}
+			\begin{itemize}
+				\item	Let $g_{1}, g_{2} \in C(H)$ with $g_{2}h_{1} = h_{2}g_{1}$ and $g_{2}h_{2}=h_{2}g_{2}$ for some $h_{1}, h_{2} \in H$. Multiplying these two equations we get, $g_{1}g_{2}h_{1}h_{2} = h_{1}h_{2}g_{1}g_{2} \implies g_{1}g_{2} \in C(H)$. Thus, the closure property is satisfied.   
+				\item The identity in $G$ would be the identity in $H$, thus for $1 \in H \quad 1h = h1 \quad \forall h \in H$.. Thus $1 \in G$. So the identity is well-defined. 
+				\item The inverses also exist, for $g \in C(H)$ we have $gh = hg$, for some $h \in H$. We have the inverse $g^{-1} \in H \subset G$. We first multiply this inverse on the left side, so we have $ghg^{-1} = hgg^{-1}$. Now we again multiply the inverse on the right side, so $g^{-1}ghg^{-1} = g^{-1}hgg^{-1} \implies hg^{-1} = g^{-1}h$. Thus $g^{-1} \in C(H)$. 
+	\end{itemize}
+
+		\end{proof}
+	}
+
+\end{question}
+
+%Problem 6
+\begin{question}
+	\questiontext{Let $G$ b a group, let $X$ be a set, and let $f: G \to X$ be a bijection. Show that there is a unique operation on $X$, so that $X$ is a group and $f$ is an isomorphism.}
+	\answer{
+		\begin{proof}
+			As $G$ is a group so we can define an operation on it such as : $m_{G} : G \times G \to G$. And similarly for $X$, $m_{X}: X \times X \to X$. And as we have $f : G \to X$ is a bijection thus it induces another bijection, namely : $f \times f : G \times G \to X \times X$. Thus,  
+			\[
+			\begin{tikzcd}
+				G \times G \arrow[d, "m_{G}"'] \arrow[r, "f \times f"] && X \times X \arrow[d, "m_{X}"] \\
+				G \arrow[r, "f"']                                      && X                            
+			\end{tikzcd}
+		\]
+
+	Thus, for $X$ to be a group, $m_{G}$ has to be unique and $f$ would be a bijective group homomorphism, i.e an isomorphism. 
+		\end{proof}
+}
+\end{question}
+
+%Problem 7
+\begin{question}
+	\questiontext{Determine the center of $GL_{n}(\bR)$.}
+	\answer{
+		\begin{proof}
+
+
+
+		\end{proof}
+	}
+
+\end{question}
+
+%Problem 8 
+\begin{question}
+	\questiontext{Suppose given on $E$ an (associative and commutative) addition under which all the elements of $E$ are invertible and a multiplication which is non-associative but commutative and doubly distributive with respect to additoin. Suppose further that $n \in \bZ, n \neq0$ and $nx=0 \implies x=0$ in $E$. Show hat if, writing $[xy,y,z] = (xy)z-z(yz)$, the identity
+	\[ [xy,u,z] + [yz,u,z] + [zx,u,y] = 0 \] 
+holds, then $x^{m+n} = x^{m}x^{n}$ for all $x$ (show, by induction on $p$, the identity $[x^{q},y,x^{p-q}]=0$ holds for $1 \leq q < p$).}
+	\answer{
+		\begin{proof}
+
+
+
+
+		\end{proof}
+	}
+
+\end{question}
+\end{document}

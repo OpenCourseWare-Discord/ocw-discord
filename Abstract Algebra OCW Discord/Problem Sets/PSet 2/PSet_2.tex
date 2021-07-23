@@ -1,0 +1,63 @@
+\documentclass{article}
+\input{preamble.tex}
+\title{Problem Set 2 : Group Homomorphisms and Isomorphisms}
+\date{July 21, 2021}
+\usepackage{calc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+
+\begin{document}
+\maketitle
+\noindent
+\textbf{Referenced Texts :} \\
+Artin's \textit{Algebra}: Chapter 2; Section 1-6. \\
+Rotman's \textit{Advanced Modern Algebra} : Chapter 2; Section 1-3.\\
+Rotman's \textit{Introduction to Theory of Groups}: Chapter 1. \\
+Thomas Judson's \textit{Abstract Algebra: Theory and Applications}: Chapter 3; Section 1-4 \\
+Nicholas Bourbaki's \textit{Algebre, Vol.I}: Chapter 1-3
+	
+	\vspace{5mm}
+
+\par 
+1. Let $x$ and $y$ be two elements of a group $G$. Assume that each of the elements $x,y$ and $xy$ has order 2. Prove that the set $H = \{1,x,y,xy\}$ is a subgroup of G, and it has order 4. \textbf{[Artin Exercise 4.7]}
+
+\vspace{2.5mm}
+\noindent
+
+2. Let G be a group and let $a \in G$ have order k. If $p$ is a prime divisor of $k$, and if there is $x \in G$ with $x^{p} = a$, prove that x has order $pk$. \textbf{[Rotman, \textit{Advanced Modern Algebra} Exercise 2.24]}
+
+\vspace{2.5mm}
+\noindent
+
+3. If $G$ is a group in which $x^{2}=1$ for every $x \in G$, prove that $G$ must be abelian. \textbf{[Rotman's \textit{Advanced Modern Algebra} Exercise 2.26]}
+
+\vspace{2.5mm}
+\noindent
+
+4. If $G$ is a group with an even number of elements, prove that the number of elements in $G$ of order 2 is odd. In particular, $G$ must contain an element of order 2. \textbf{[Rotman, \textit{Advanced Modern Algebra}:  Exercise 2.27]}
+
+\vspace{2.5mm}
+\noindent
+
+5. Let $H$ be a subgroup of $G$ and 
+\[ C(H) = \{ g \in G : gh = hg \quad \forall h \in H \} \] 
+Prove that $C(H)$ is a subgroup of $G$. This is known as the \textit{centralizer} of $H$ in $G$. \textbf{[Judson Exercise 3.4.53]}
+
+\vspace{2.5mm}
+\noindent
+
+6. Let $G$ be a group, let $X$ be a set, and let $f: G \to X$ be a bijection. Show that there is a unique operation on $X$, so that $X$ is a group and $f$ is an isomorphism. \textbf{[Rotman, \textit{Intro to Theory of Groups}: Exercise 1.44]}
+
+\vspace{2.5mm}
+\noindent
+
+7. Determine the center of $GL_{n}(\bR)$. \textbf{[Artin, Exercise 5.6]}
+
+\vspace{2.5mm}
+\noindent
+
+8. [Optional] Suppose given on $E$ an (assosciative and commutative) addition under which all the elements of $E$ are invertive and a multiplication which is \textit{non-assosciative}, but commutative and doubly distributive with respect to addition. Suppose further that $n \in \bZ, n\neq 0$ and $nx=0 \implies x=0$ in $E$. Show that if, writing $[xy, y, z] = (xy)z - x(yz)$, the identity
+\[ [xy,u,z] + [yz,u,z] + [zx,u,y] = 0 \]
+
+holds, then $x^{m+n} = x^{m}x^{n}$ for all x (show, by induction on $p$, the identity $[x^{q},y, x^{p-q}]=0$ holds for $1 \leq q < p$). \textbf{[N. Bourbaki, \textit{Algebre, Vol.I}: Exercise 9, \S 3.]}
+\end{document}
